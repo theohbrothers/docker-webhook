@@ -10,7 +10,11 @@ Dockerized [`webhook`](https://github.com/adnanh/webhook) with useful tools.
 
 | Tag | Dockerfile Build Context |
 |:-------:|:---------:|
-| `:2.8.0-alpine-3.13`, `:latest` | [View](variants/2.8.0-alpine-3.13 ) |
+| `:2.8.0-alpine-3.14`, `:latest` | [View](variants/2.8.0-alpine-3.14 ) |
+| `:2.8.0-sops-alpine-3.14` | [View](variants/2.8.0-sops-alpine-3.14 ) |
+| `:2.7.0-alpine-3.14` | [View](variants/2.7.0-alpine-3.14 ) |
+| `:2.7.0-sops-alpine-3.14` | [View](variants/2.7.0-sops-alpine-3.14 ) |
+| `:2.8.0-alpine-3.13` | [View](variants/2.8.0-alpine-3.13 ) |
 | `:2.8.0-sops-alpine-3.13` | [View](variants/2.8.0-sops-alpine-3.13 ) |
 | `:2.7.0-alpine-3.13` | [View](variants/2.7.0-alpine-3.13 ) |
 | `:2.7.0-sops-alpine-3.13` | [View](variants/2.7.0-sops-alpine-3.13 ) |
@@ -18,7 +22,6 @@ Dockerized [`webhook`](https://github.com/adnanh/webhook) with useful tools.
 | `:2.8.0-sops-alpine-3.12` | [View](variants/2.8.0-sops-alpine-3.12 ) |
 | `:2.7.0-alpine-3.12` | [View](variants/2.7.0-alpine-3.12 ) |
 | `:2.7.0-sops-alpine-3.12` | [View](variants/2.7.0-sops-alpine-3.12 ) |
-
 
 ## Usage
 
@@ -34,4 +37,37 @@ docker run -it -p 9000:9000 -v $(pwd)/hooks.yml:/config/hooks.yml:ro theohbrothe
 
 # Run the webhook
 wget -qO- "http://$HOSTNAME:9000/hooks/hello-world"
+```
+
+## FAQ
+
+### Q: `webhook` fails with error `__nanosleep_time64: symbol not found`
+
+On Raspberry Pi, running `alpine-3.12` fails with error:
+
+```sh
+$ docker run -it theohbrothers/docker-webhook:2.8.0-alpine-3.12
+Error relocating /usr/local/bin/webhook: __nanosleep_time64: symbol not found
+```
+
+The solution is to use `alpine-3.13` or later
+
+```sh
+$ docker run -it theohbrothers/docker-webhook:2.8.0-alpine-3.13
+```
+
+### Q: `ping` fails with error `ping: clock_gettime(MONOTONIC) failed`
+
+On Raspberry Pi, running `ping` on `alpine-3.13` and above might fail with:
+
+```sh
+$ docker run -it theohbrothers/docker-webhook:2.8.0-alpine-3.13
+PING 1.1.1.1 (1.1.1.1): 56 data bytes
+ping: clock_gettime(MONOTONIC) failed
+```
+
+The solution is to use `--security-opt seccomp=unconfined` option. See [here](https://gitlab.alpinelinux.org/alpine/aports/-/issues/12091)
+
+```sh
+$ docker run -it --security-opt seccomp=unconfined theohbrothers/docker-webhook:2.8.0-alpine-3.13
 ```
