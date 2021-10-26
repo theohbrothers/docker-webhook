@@ -14,7 +14,8 @@ FROM alpine:3.12 as final
 COPY --from=BUILD_IMAGE /usr/local/bin/webhook /usr/local/bin/webhook
 WORKDIR /config
 ENTRYPOINT [ "webhook" ]
-CMD [ "-verbose", "-hooks=/config/hooks.yml" ]
+EXPOSE 9000
+CMD [ "-verbose", "-hooks=/config/hooks.yml", "-hotreload" ]
 RUN apk add --no-cache git
 
 RUN wget -qO- https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.linux > /usr/local/bin/sops && chmod +x /usr/local/bin/sops

@@ -15,7 +15,8 @@ FROM $( $VARIANT['_metadata']['distro'] ):$( $VARIANT['_metadata']['distro_versi
 COPY --from=BUILD_IMAGE /usr/local/bin/webhook /usr/local/bin/webhook
 WORKDIR /config
 ENTRYPOINT [ "webhook" ]
-CMD [ "-verbose", "-hooks=/config/hooks.yml" ]
+EXPOSE 9000
+CMD [ "-verbose", "-hooks=/config/hooks.yml", "-hotreload" ]
 
 "@
 
