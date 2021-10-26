@@ -7,8 +7,8 @@ RUN echo "I am running on `$BUILDPLATFORM, building for `$TARGETPLATFORM"
 RUN apk add --no-cache git \
     && git clone https://github.com/adnanh/webhook.git /src --branch 2.8.0 \
     && cd /src \
-    && OS=$( ($VARIANT['_metadata']['platforms'].split(',') | % { $_.split('/')[0] } | Select-Object -Unique ) -join ' ' ) \
-       ARCH=$( ($VARIANT['_metadata']['platforms'].split(',') | % { $_.split('/')[1] } | Select-Object -Unique ) -join ' ' ) \
+    && OS="$( ($VARIANT['_metadata']['platforms'].split(',') | % { $_.split('/')[0] } | Select-Object -Unique ) -join ' ' )" \
+       ARCH="$( ($VARIANT['_metadata']['platforms'].split(',') | % { $_.split('/')[1] } | Select-Object -Unique ) -join ' ' )" \
        go build -ldflags="-s -w" -o /usr/local/bin/webhook
 
 FROM $( $VARIANT['_metadata']['distro'] ):$( $VARIANT['_metadata']['distro_version'] ) as final
