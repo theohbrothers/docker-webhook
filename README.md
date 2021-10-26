@@ -10,7 +10,11 @@ Dockerized [`webhook`](https://github.com/adnanh/webhook) with useful tools.
 
 | Tag | Dockerfile Build Context |
 |:-------:|:---------:|
-| `:2.8.0-alpine-3.12`, `:latest` | [View](variants/2.8.0-alpine-3.12 ) |
+| `:2.8.0-alpine-3.13`, `:latest` | [View](variants/2.8.0-alpine-3.13 ) |
+| `:2.8.0-sops-alpine-3.13` | [View](variants/2.8.0-sops-alpine-3.13 ) |
+| `:2.7.0-alpine-3.13` | [View](variants/2.7.0-alpine-3.13 ) |
+| `:2.7.0-sops-alpine-3.13` | [View](variants/2.7.0-sops-alpine-3.13 ) |
+| `:2.8.0-alpine-3.12` | [View](variants/2.8.0-alpine-3.12 ) |
 | `:2.8.0-sops-alpine-3.12` | [View](variants/2.8.0-sops-alpine-3.12 ) |
 | `:2.7.0-alpine-3.12` | [View](variants/2.7.0-alpine-3.12 ) |
 | `:2.7.0-sops-alpine-3.12` | [View](variants/2.7.0-sops-alpine-3.12 ) |
