@@ -5,7 +5,7 @@ ARG BUILDPLATFORM
 RUN echo "I am running on `$BUILDPLATFORM, building for `$TARGETPLATFORM"
 
 RUN apk add --no-cache git \
-    && git clone https://github.com/adnanh/webhook.git /src --branch 2.8.0 \
+    && git clone https://github.com/adnanh/webhook.git /src --branch $( $VARIANT['_metadata']['package_version'] ) \
     && cd /src \
     && OS="$( ($VARIANT['_metadata']['platforms'].split(',') | % { $_.split('/')[0] } | Select-Object -Unique ) -join ' ' )" \
        ARCH="$( ($VARIANT['_metadata']['platforms'].split(',') | % { $_.split('/')[1] } | Select-Object -Unique ) -join ' ' )" \

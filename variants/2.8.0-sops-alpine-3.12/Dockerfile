@@ -16,8 +16,6 @@ WORKDIR /config
 ENTRYPOINT [ "webhook" ]
 EXPOSE 9000
 CMD [ "-verbose", "-hooks=/config/hooks.yml", "-hotreload" ]
-RUN apk add --no-cache git
-
 RUN wget -qO- https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.linux > /usr/local/bin/sops && chmod +x /usr/local/bin/sops
 
 RUN apk add --no-cache gnupg

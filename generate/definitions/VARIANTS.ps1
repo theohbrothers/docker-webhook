@@ -1,17 +1,15 @@
-$local:VARIANTS_DISTRO_VERSIONS = @(
-    '3.12'
-)
+
 # Docker image variants' definitions
 $local:VARIANTS_MATRIX = @(
-    foreach ($v in $local:VARIANTS_DISTRO_VERSIONS) {
-        @{
-            distro = 'alpine'
-            distro_version = $v
-            subvariants = @(
-                @{ components = @(); tag_as_latest = if ($v -eq $local:VARIANTS_DISTRO_VERSIONS[0]) { $true } else { $false } }
-                @{ components = @( 'git', 'sops' ); }
-            )
-        }
+    @{
+        package = 'webhook'
+        package_version = '2.8.0'
+        distro = 'alpine'
+        distro_version = '3.12'
+        subvariants = @(
+            @{ components = @(); tag_as_latest = $true }
+            @{ components = @( 'sops' ) }
+        )
     }
 )
 
@@ -21,6 +19,7 @@ $VARIANTS = @(
             @{
                 # Metadata object
                 _metadata = @{
+                    package_version = $variant['package_version']
                     distro = $variant['distro']
                     distro_version = $variant['distro_version']
                     platforms = & {
@@ -34,8 +33,10 @@ $VARIANTS = @(
                 }
                 # Docker image tag. E.g. '3.8-curl'
                 tag = @(
-                        $variant['distro_version']
+                        $variant['package_version']
                         $subVariant['components'] | ? { $_ }
+                        $variant['distro']
+                        $variant['distro_version']
                 ) -join '-'
                 tag_as_latest = if ( $subVariant.Contains('tag_as_latest') ) {
                                     $subVariant['tag_as_latest']
