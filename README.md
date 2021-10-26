@@ -10,8 +10,8 @@ Dockerized [`webhook`](https://github.com/adnanh/webhook) with useful tools.
 
 | Tag | Dockerfile Build Context |
 |:-------:|:---------:|
-| `:3.12-git-sops`, `:latest` | [View](variants/3.12-git-sops ) |
-| `:3.12-bare` | [View](variants/3.12-bare ) |
+| `:3.12`, `:latest` | [View](variants/3.12 ) |
+| `:3.12-git-sops` | [View](variants/3.12-git-sops ) |
 
 
 ## Usage

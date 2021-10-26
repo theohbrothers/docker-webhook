@@ -8,8 +8,8 @@ $local:VARIANTS_MATRIX = @(
             distro = 'alpine'
             distro_version = $v
             subvariants = @(
-                @{ components = @( 'git', 'sops' ); tag_as_latest = if ($v -eq $local:VARIANTS_DISTRO_VERSIONS[0]) { $true } else { $false } }
-                @{ components = @( 'bare' ) }
+                @{ components = @(); tag_as_latest = if ($v -eq $local:VARIANTS_DISTRO_VERSIONS[0]) { $true } else { $false } }
+                @{ components = @( 'git', 'sops' ); }
             )
         }
     }
