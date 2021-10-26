@@ -11,11 +11,11 @@ on:
     - master
 jobs:
 
-  build-3-12-git-sops:
+  build-3-12:
     runs-on: ubuntu-latest
     env:
-      VARIANT_TAG: 3.12-git-sops
-      VARIANT_BUILD_DIR: variants/3.12-git-sops
+      VARIANT_TAG: 3.12
+      VARIANT_BUILD_DIR: variants/3.12
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -139,11 +139,11 @@ jobs:
       run: docker logout
       if: always()
 
-  build-3-12-bare:
+  build-3-12-git-sops:
     runs-on: ubuntu-latest
     env:
-      VARIANT_TAG: 3.12-bare
-      VARIANT_BUILD_DIR: variants/3.12-bare
+      VARIANT_TAG: 3.12-git-sops
+      VARIANT_BUILD_DIR: variants/3.12-git-sops
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -267,7 +267,7 @@ jobs:
       if: always()
 
   update-draft-release:
-    needs: [build-3-12-git-sops, build-3-12-bare]
+    needs: [build-3-12, build-3-12-git-sops]
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
@@ -281,7 +281,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-draft-release:
-    needs: [build-3-12-git-sops, build-3-12-bare]
+    needs: [build-3-12, build-3-12-git-sops]
     if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
