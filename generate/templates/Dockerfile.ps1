@@ -1,5 +1,5 @@
 @"
-FROM golang:1.17.2-alpine3.14 as BUILD_IMAGE
+FROM golang:1.17.2-alpine3.14 as builder
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 RUN echo "I am running on `$BUILDPLATFORM, building for `$TARGETPLATFORM"
@@ -11,8 +11,8 @@ RUN apk add --no-cache git \
        ARCH="$( ($VARIANT['_metadata']['platforms'].split(',') | % { $_.split('/')[1] } | Select-Object -Unique ) -join ' ' )" \
        go build -ldflags="-s -w" -o /usr/local/bin/webhook
 
-FROM $( $VARIANT['_metadata']['distro'] ):$( $VARIANT['_metadata']['distro_version'] ) as final
-COPY --from=BUILD_IMAGE /usr/local/bin/webhook /usr/local/bin/webhook
+FROM $( $VARIANT['_metadata']['distro'] ):$( $VARIANT['_metadata']['distro_version'] )
+COPY --from=builder /usr/local/bin/webhook /usr/local/bin/webhook
 WORKDIR /config
 ENTRYPOINT [ "webhook" ]
 EXPOSE 9000

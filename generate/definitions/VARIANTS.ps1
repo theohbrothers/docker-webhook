@@ -11,6 +11,16 @@ $local:VARIANTS_MATRIX = @(
             @{ components = @( 'sops' ) }
         )
     }
+    @{
+        package = 'webhook'
+        package_version = '2.7.0'
+        distro = 'alpine'
+        distro_version = '3.12'
+        subvariants = @(
+            @{ components = @() }
+            @{ components = @( 'sops' ) }
+        )
+    }
 )
 
 $VARIANTS = @(

@@ -4,7 +4,7 @@ ARG BUILDPLATFORM
 RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
 
 RUN apk add --no-cache git \
-    && git clone https://github.com/adnanh/webhook.git /src --branch 2.8.0 \
+    && git clone https://github.com/adnanh/webhook.git /src --branch 2.7.0 \
     && cd /src \
     && OS="linux" \
        ARCH="386 amd64 arm arm64 s390x" \
@@ -16,3 +16,7 @@ WORKDIR /config
 ENTRYPOINT [ "webhook" ]
 EXPOSE 9000
 CMD [ "-verbose", "-hooks=/config/hooks.yml", "-hotreload" ]
+RUN wget -qO- https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.linux > /usr/local/bin/sops && chmod +x /usr/local/bin/sops
+
+RUN apk add --no-cache gnupg
+
