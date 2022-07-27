@@ -9,6 +9,7 @@ $local:VARIANTS_MATRIX = @(
         subvariants = @(
             @{ components = @(); tag_as_latest = $true }
             @{ components = @( 'sops' ) }
+            @{ components = @( 'curl', 'jq', 'sops' ) }
         )
     }
     @{
@@ -19,6 +20,7 @@ $local:VARIANTS_MATRIX = @(
         subvariants = @(
             @{ components = @() }
             @{ components = @( 'sops' ) }
+            @{ components = @( 'curl', 'jq', 'sops' ) }
         )
     }
     @{
@@ -29,6 +31,7 @@ $local:VARIANTS_MATRIX = @(
         subvariants = @(
             @{ components = @() }
             @{ components = @( 'sops' ) }
+            @{ components = @( 'curl', 'jq', 'sops' ) }
         )
     }
     @{
@@ -39,6 +42,7 @@ $local:VARIANTS_MATRIX = @(
         subvariants = @(
             @{ components = @() }
             @{ components = @( 'sops' ) }
+            @{ components = @( 'curl', 'jq', 'sops' ) }
         )
     }
 )
