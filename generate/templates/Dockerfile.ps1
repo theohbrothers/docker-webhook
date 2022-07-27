@@ -24,19 +24,17 @@ $VARIANT['_metadata']['components'] | % {
     $component = $_
 
     switch( $component ) {
-
-        'git' {
-        @"
-RUN apk add --no-cache git
-
-
-"@
-
-        }
-
         'curl' {
             @"
 RUN apk add --no-cache curl
+
+
+"@
+        }
+
+        'git' {
+            @"
+RUN apk add --no-cache jq
 
 
 "@
