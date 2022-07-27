@@ -9,7 +9,7 @@ $local:VARIANTS_MATRIX = @(
         subvariants = @(
             @{ components = @(); tag_as_latest = $true }
             @{ components = @( 'sops' ) }
-            @{ components = @( 'curl', 'jq', 'sops' ) }
+            @{ components = @( 'curl', 'git', 'jq', 'sops' ) }
         )
     }
     @{
@@ -20,7 +20,7 @@ $local:VARIANTS_MATRIX = @(
         subvariants = @(
             @{ components = @() }
             @{ components = @( 'sops' ) }
-            @{ components = @( 'curl', 'jq', 'sops' ) }
+            @{ components = @( 'curl', 'git', 'jq', 'sops' ) }
         )
     }
     @{
@@ -31,7 +31,7 @@ $local:VARIANTS_MATRIX = @(
         subvariants = @(
             @{ components = @() }
             @{ components = @( 'sops' ) }
-            @{ components = @( 'curl', 'jq', 'sops' ) }
+            @{ components = @( 'curl', 'git', 'jq', 'sops' ) }
         )
     }
     @{
@@ -39,10 +39,11 @@ $local:VARIANTS_MATRIX = @(
         package_version = '2.7.0'
         distro = 'alpine'
         distro_version = '3.12'
+
         subvariants = @(
             @{ components = @() }
             @{ components = @( 'sops' ) }
-            @{ components = @( 'curl', 'jq', 'sops' ) }
+            @{ components = @( 'curl', 'git', 'jq', 'sops' ) }
         )
     }
 )
