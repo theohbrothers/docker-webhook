@@ -34,6 +34,22 @@ RUN apk add --no-cache git
 
         }
 
+        'curl' {
+            @"
+RUN apk add --no-cache curl
+
+
+"@
+        }
+
+        'jq' {
+            @"
+RUN apk add --no-cache jq
+
+
+"@
+        }
+
         'sops' {
             if ( $VARIANT['_metadata']['distro'] -eq 'alpine' -and $VARIANT['_metadata']['distro_version'] -eq '3.6' ) {
                 @"
