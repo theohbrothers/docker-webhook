@@ -266,11 +266,11 @@ jobs:
       run: docker logout
       if: always()
 
-  build-2-8-0-curl-git-jq-sops-alpine-3-13:
+  build-2-8-0-curl-git-jq-sops-ssh-alpine-3-13:
     runs-on: ubuntu-latest
     env:
-      VARIANT_TAG: 2.8.0-curl-git-jq-sops-alpine-3.13
-      VARIANT_BUILD_DIR: variants/2.8.0-curl-git-jq-sops-alpine-3.13
+      VARIANT_TAG: 2.8.0-curl-git-jq-sops-ssh-alpine-3.13
+      VARIANT_BUILD_DIR: variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.13
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -647,11 +647,11 @@ jobs:
       run: docker logout
       if: always()
 
-  build-2-7-0-curl-git-jq-sops-alpine-3-13:
+  build-2-7-0-curl-git-jq-sops-ssh-alpine-3-13:
     runs-on: ubuntu-latest
     env:
-      VARIANT_TAG: 2.7.0-curl-git-jq-sops-alpine-3.13
-      VARIANT_BUILD_DIR: variants/2.7.0-curl-git-jq-sops-alpine-3.13
+      VARIANT_TAG: 2.7.0-curl-git-jq-sops-ssh-alpine-3.13
+      VARIANT_BUILD_DIR: variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.13
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -1028,11 +1028,11 @@ jobs:
       run: docker logout
       if: always()
 
-  build-2-8-0-curl-git-jq-sops-alpine-3-12:
+  build-2-8-0-curl-git-jq-sops-ssh-alpine-3-12:
     runs-on: ubuntu-latest
     env:
-      VARIANT_TAG: 2.8.0-curl-git-jq-sops-alpine-3.12
-      VARIANT_BUILD_DIR: variants/2.8.0-curl-git-jq-sops-alpine-3.12
+      VARIANT_TAG: 2.8.0-curl-git-jq-sops-ssh-alpine-3.12
+      VARIANT_BUILD_DIR: variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.12
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -1409,11 +1409,11 @@ jobs:
       run: docker logout
       if: always()
 
-  build-2-7-0-curl-git-jq-sops-alpine-3-12:
+  build-2-7-0-curl-git-jq-sops-ssh-alpine-3-12:
     runs-on: ubuntu-latest
     env:
-      VARIANT_TAG: 2.7.0-curl-git-jq-sops-alpine-3.12
-      VARIANT_BUILD_DIR: variants/2.7.0-curl-git-jq-sops-alpine-3.12
+      VARIANT_TAG: 2.7.0-curl-git-jq-sops-ssh-alpine-3.12
+      VARIANT_BUILD_DIR: variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.12
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -1537,7 +1537,7 @@ jobs:
       if: always()
 
   update-draft-release:
-    needs: [build-2-8-0-alpine-3-13, build-2-8-0-sops-alpine-3-13, build-2-8-0-curl-git-jq-sops-alpine-3-13, build-2-7-0-alpine-3-13, build-2-7-0-sops-alpine-3-13, build-2-7-0-curl-git-jq-sops-alpine-3-13, build-2-8-0-alpine-3-12, build-2-8-0-sops-alpine-3-12, build-2-8-0-curl-git-jq-sops-alpine-3-12, build-2-7-0-alpine-3-12, build-2-7-0-sops-alpine-3-12, build-2-7-0-curl-git-jq-sops-alpine-3-12]
+    needs: [build-2-8-0-alpine-3-13, build-2-8-0-sops-alpine-3-13, build-2-8-0-curl-git-jq-sops-ssh-alpine-3-13, build-2-7-0-alpine-3-13, build-2-7-0-sops-alpine-3-13, build-2-7-0-curl-git-jq-sops-ssh-alpine-3-13, build-2-8-0-alpine-3-12, build-2-8-0-sops-alpine-3-12, build-2-8-0-curl-git-jq-sops-ssh-alpine-3-12, build-2-7-0-alpine-3-12, build-2-7-0-sops-alpine-3-12, build-2-7-0-curl-git-jq-sops-ssh-alpine-3-12]
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
@@ -1551,7 +1551,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-draft-release:
-    needs: [build-2-8-0-alpine-3-13, build-2-8-0-sops-alpine-3-13, build-2-8-0-curl-git-jq-sops-alpine-3-13, build-2-7-0-alpine-3-13, build-2-7-0-sops-alpine-3-13, build-2-7-0-curl-git-jq-sops-alpine-3-13, build-2-8-0-alpine-3-12, build-2-8-0-sops-alpine-3-12, build-2-8-0-curl-git-jq-sops-alpine-3-12, build-2-7-0-alpine-3-12, build-2-7-0-sops-alpine-3-12, build-2-7-0-curl-git-jq-sops-alpine-3-12]
+    needs: [build-2-8-0-alpine-3-13, build-2-8-0-sops-alpine-3-13, build-2-8-0-curl-git-jq-sops-ssh-alpine-3-13, build-2-7-0-alpine-3-13, build-2-7-0-sops-alpine-3-13, build-2-7-0-curl-git-jq-sops-ssh-alpine-3-13, build-2-8-0-alpine-3-12, build-2-8-0-sops-alpine-3-12, build-2-8-0-curl-git-jq-sops-ssh-alpine-3-12, build-2-7-0-alpine-3-12, build-2-7-0-sops-alpine-3-12, build-2-7-0-curl-git-jq-sops-ssh-alpine-3-12]
     if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:

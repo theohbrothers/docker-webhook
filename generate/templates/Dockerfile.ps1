@@ -68,6 +68,14 @@ RUN apk add --no-cache gnupg
 "@
         }
 
+        'ssh' {
+            @"
+RUN apk add --no-cache openssh-client
+
+
+"@
+        }
+
         'bare' {}
 
         default {
