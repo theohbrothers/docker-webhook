@@ -78,4 +78,19 @@ The solution is to use `--security-opt seccomp=unconfined` option. See [here](ht
 ```sh
 $ docker run -it --security-opt seccomp=unconfined theohbrothers/docker-webhook:2.8.0-alpine-3.13
 ```
+
+## Development
+
+Requires Windows `powershell` or [`pwsh`](https://github.com/PowerShell/PowerShell).
+
+```powershell
+# Install Generate-DockerImageVariants module: https://github.com/theohbrothers/Generate-DockerImageVariants
+Install-Module -Name Generate-DockerImageVariants -Repository PSGallery -Scope CurrentUser -Force -Verbose
+
+# Edit ./generate templates
+
+# Generate the variants
+Generate-DockerImageVariants .
+```
+
 '@
