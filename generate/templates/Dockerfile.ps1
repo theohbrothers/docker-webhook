@@ -13,6 +13,7 @@ RUN apk add --no-cache git \
 
 FROM $( $VARIANT['_metadata']['distro'] ):$( $VARIANT['_metadata']['distro_version'] )
 COPY --from=builder /usr/local/bin/webhook /usr/local/bin/webhook
+RUN apk add --no-cache ca-certificates
 
 "@
 
@@ -24,7 +25,6 @@ $VARIANT['_metadata']['components'] | % {
             @"
 RUN apk add --no-cache curl
 
-
 "@
         }
 
@@ -32,14 +32,12 @@ RUN apk add --no-cache curl
             @"
 RUN apk add --no-cache git
 
-
 "@
         }
 
         'jq' {
             @"
 RUN apk add --no-cache jq
-
 
 "@
         }
@@ -50,7 +48,6 @@ RUN apk add --no-cache jq
 # Fix wget not working in alpine:3.6. https://github.com/gliderlabs/docker-alpine/issues/423
 RUN apk add --no-cache libressl
 
-
 "@
             }
             @"
@@ -60,14 +57,12 @@ RUN wget -qO- https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7
 
 RUN apk add --no-cache gnupg
 
-
 "@
         }
 
         'ssh' {
             @"
 RUN apk add --no-cache openssh-client
-
 
 "@
         }
