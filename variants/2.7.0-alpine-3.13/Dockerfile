@@ -12,6 +12,7 @@ RUN apk add --no-cache git \
 
 FROM alpine:3.13
 COPY --from=builder /usr/local/bin/webhook /usr/local/bin/webhook
+RUN apk add --no-cache ca-certificates
 WORKDIR /config
 ENTRYPOINT [ "webhook" ]
 EXPOSE 9000
