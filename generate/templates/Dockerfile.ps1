@@ -7,9 +7,7 @@ RUN echo "I am running on `$BUILDPLATFORM, building for `$TARGETPLATFORM"
 RUN apk add --no-cache git \
     && git clone https://github.com/adnanh/webhook.git /src --branch $( $VARIANT['_metadata']['package_version'] ) \
     && cd /src \
-    && OS="$( ($VARIANT['_metadata']['platforms'].split(',') | % { $_.split('/')[0] } | Select-Object -Unique ) -join ' ' )" \
-       ARCH="$( ($VARIANT['_metadata']['platforms'].split(',') | % { $_.split('/')[1] } | Select-Object -Unique ) -join ' ' )" \
-       go build -ldflags="-s -w" -o /usr/local/bin/webhook
+    && go build -ldflags="-s -w" -o /usr/local/bin/webhook
 
 FROM $( $VARIANT['_metadata']['distro'] ):$( $VARIANT['_metadata']['distro_version'] )
 COPY --from=builder /usr/local/bin/webhook /usr/local/bin/webhook
