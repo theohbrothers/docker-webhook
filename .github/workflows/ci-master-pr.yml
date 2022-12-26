@@ -93,7 +93,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -108,7 +108,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -121,7 +121,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -220,7 +220,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -235,7 +235,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -248,7 +248,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -346,7 +346,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -361,7 +361,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -374,7 +374,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -472,7 +472,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -487,7 +487,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -500,7 +500,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -598,7 +598,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -613,7 +613,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -626,7 +626,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -724,7 +724,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -739,7 +739,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -752,7 +752,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -850,7 +850,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -865,7 +865,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -878,7 +878,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -976,7 +976,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -991,7 +991,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -1004,7 +1004,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -1102,7 +1102,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -1117,7 +1117,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -1130,7 +1130,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -1228,7 +1228,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -1243,7 +1243,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -1256,7 +1256,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -1354,7 +1354,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -1369,7 +1369,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -1382,7 +1382,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
@@ -1480,7 +1480,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -1495,7 +1495,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG_WITH_REF }}
@@ -1508,7 +1508,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         context: ${{ env.VARIANT_BUILD_DIR }}
-        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
+        platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
           ${{ github.repository }}:${{ env.VARIANT_TAG }}
