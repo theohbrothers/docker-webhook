@@ -13,10 +13,6 @@ RUN apk add --no-cache git \
 
 FROM $( $VARIANT['_metadata']['distro'] ):$( $VARIANT['_metadata']['distro_version'] )
 COPY --from=builder /usr/local/bin/webhook /usr/local/bin/webhook
-WORKDIR /config
-ENTRYPOINT [ "webhook" ]
-EXPOSE 9000
-CMD [ "-verbose", "-hooks=/config/hooks.yml", "-hotreload" ]
 
 "@
 
@@ -83,3 +79,11 @@ RUN apk add --no-cache openssh-client
         }
     }
 }
+
+@"
+WORKDIR /config
+ENTRYPOINT [ "webhook" ]
+EXPOSE 9000
+CMD [ "-verbose", "-hooks=/config/hooks.yml", "-hotreload" ]
+
+"@

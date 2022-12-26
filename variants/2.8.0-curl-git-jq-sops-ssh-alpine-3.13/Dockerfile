@@ -12,10 +12,6 @@ RUN apk add --no-cache git \
 
 FROM alpine:3.13
 COPY --from=builder /usr/local/bin/webhook /usr/local/bin/webhook
-WORKDIR /config
-ENTRYPOINT [ "webhook" ]
-EXPOSE 9000
-CMD [ "-verbose", "-hooks=/config/hooks.yml", "-hotreload" ]
 RUN apk add --no-cache curl
 
 RUN apk add --no-cache git
@@ -30,3 +26,7 @@ RUN apk add --no-cache gnupg
 
 RUN apk add --no-cache openssh-client
 
+WORKDIR /config
+ENTRYPOINT [ "webhook" ]
+EXPOSE 9000
+CMD [ "-verbose", "-hooks=/config/hooks.yml", "-hotreload" ]
