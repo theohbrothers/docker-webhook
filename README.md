@@ -10,21 +10,21 @@ Dockerized [`webhook`](https://github.com/adnanh/webhook) with useful tools.
 
 | Tag | Dockerfile Build Context |
 |:-------:|:---------:|
-| `:2.8.0-alpine-3.17`, `:latest` | [View](variants/2.8.0-alpine-3.17 ) |
-| `:2.8.0-libvirt-8-alpine-3.17` | [View](variants/2.8.0-libvirt-8-alpine-3.17 ) |
-| `:2.8.0-curl-git-jq-sops-ssh-alpine-3.17` | [View](variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.17 ) |
-| `:2.8.0-alpine-3.15` | [View](variants/2.8.0-alpine-3.15 ) |
-| `:2.8.0-libvirt-7-alpine-3.15` | [View](variants/2.8.0-libvirt-7-alpine-3.15 ) |
-| `:2.8.0-curl-git-jq-sops-ssh-alpine-3.15` | [View](variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.15 ) |
-| `:2.8.0-alpine-3.13` | [View](variants/2.8.0-alpine-3.13 ) |
-| `:2.8.0-libvirt-6-alpine-3.13` | [View](variants/2.8.0-libvirt-6-alpine-3.13 ) |
-| `:2.8.0-curl-git-jq-sops-ssh-alpine-3.13` | [View](variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.13 ) |
-| `:2.7.0-alpine-3.13` | [View](variants/2.7.0-alpine-3.13 ) |
-| `:2.7.0-curl-git-jq-sops-ssh-alpine-3.13` | [View](variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.13 ) |
-| `:2.8.0-alpine-3.12` | [View](variants/2.8.0-alpine-3.12 ) |
-| `:2.8.0-curl-git-jq-sops-ssh-alpine-3.12` | [View](variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.12 ) |
-| `:2.7.0-alpine-3.12` | [View](variants/2.7.0-alpine-3.12 ) |
-| `:2.7.0-curl-git-jq-sops-ssh-alpine-3.12` | [View](variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.12 ) |
+| `:2.8.0-alpine-3.17`, `:latest` | [View](variants/2.8.0-alpine-3.17) |
+| `:2.8.0-libvirt-8-alpine-3.17` | [View](variants/2.8.0-libvirt-8-alpine-3.17) |
+| `:2.8.0-curl-git-jq-sops-ssh-alpine-3.17` | [View](variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.17) |
+| `:2.8.0-alpine-3.15` | [View](variants/2.8.0-alpine-3.15) |
+| `:2.8.0-libvirt-7-alpine-3.15` | [View](variants/2.8.0-libvirt-7-alpine-3.15) |
+| `:2.8.0-curl-git-jq-sops-ssh-alpine-3.15` | [View](variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.15) |
+| `:2.8.0-alpine-3.13` | [View](variants/2.8.0-alpine-3.13) |
+| `:2.8.0-libvirt-6-alpine-3.13` | [View](variants/2.8.0-libvirt-6-alpine-3.13) |
+| `:2.8.0-curl-git-jq-sops-ssh-alpine-3.13` | [View](variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.13) |
+| `:2.7.0-alpine-3.13` | [View](variants/2.7.0-alpine-3.13) |
+| `:2.7.0-curl-git-jq-sops-ssh-alpine-3.13` | [View](variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.13) |
+| `:2.8.0-alpine-3.12` | [View](variants/2.8.0-alpine-3.12) |
+| `:2.8.0-curl-git-jq-sops-ssh-alpine-3.12` | [View](variants/2.8.0-curl-git-jq-sops-ssh-alpine-3.12) |
+| `:2.7.0-alpine-3.12` | [View](variants/2.7.0-alpine-3.12) |
+| `:2.7.0-curl-git-jq-sops-ssh-alpine-3.12` | [View](variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.12) |
 
 ## Usage
 
