@@ -1,5 +1,5 @@
 @"
-FROM golang:1.17.2-alpine3.14 as builder
+FROM golang:1.20-alpine as builder
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 RUN echo "I am running on `$BUILDPLATFORM, building for `$TARGETPLATFORM"
