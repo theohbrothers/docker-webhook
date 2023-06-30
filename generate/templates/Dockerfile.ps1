@@ -86,8 +86,11 @@ RUN apk add --no-cache openssh-client
 }
 
 @"
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x docker-entrypoint.sh
+
 WORKDIR /config
-ENTRYPOINT [ "webhook" ]
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
 EXPOSE 9000
 CMD [ "-verbose", "-hooks=/config/hooks.yml", "-hotreload" ]
 
