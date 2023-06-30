@@ -4,13 +4,16 @@ ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 RUN echo "I am running on `$BUILDPLATFORM, building for `$TARGETPLATFORM"
 
-RUN apk add --no-cache git \
-    && git clone https://github.com/adnanh/webhook.git /src --branch $( $VARIANT['_metadata']['package_version'] ) \
-    && cd /src \
-    && go build -ldflags="-s -w" -o /usr/local/bin/webhook
+RUN set -eux; \
+    apk add --no-cache git; \
+    git clone https://github.com/adnanh/webhook.git /src --branch $( $VARIANT['_metadata']['package_version'] ); \
+    cd /src; \
+    go build -ldflags="-s -w" -o /usr/local/bin/webhook;
 
 FROM $( $VARIANT['_metadata']['distro'] ):$( $VARIANT['_metadata']['distro_version'] )
 COPY --from=builder /usr/local/bin/webhook /usr/local/bin/webhook
+RUN webhook --version
+
 RUN apk add --no-cache ca-certificates
 
 "@

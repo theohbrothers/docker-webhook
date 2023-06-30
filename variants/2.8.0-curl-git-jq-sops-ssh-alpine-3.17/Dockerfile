@@ -3,13 +3,16 @@ ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
 
-RUN apk add --no-cache git \
-    && git clone https://github.com/adnanh/webhook.git /src --branch 2.8.0 \
-    && cd /src \
-    && go build -ldflags="-s -w" -o /usr/local/bin/webhook
+RUN set -eux; \
+    apk add --no-cache git; \
+    git clone https://github.com/adnanh/webhook.git /src --branch 2.8.0; \
+    cd /src; \
+    go build -ldflags="-s -w" -o /usr/local/bin/webhook;
 
 FROM alpine:3.17
 COPY --from=builder /usr/local/bin/webhook /usr/local/bin/webhook
+RUN webhook --version
+
 RUN apk add --no-cache ca-certificates
 RUN apk add --no-cache curl
 RUN apk add --no-cache git
