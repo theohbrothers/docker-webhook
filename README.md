@@ -21,10 +21,6 @@ Dockerized [`webhook`](https://github.com/adnanh/webhook) with useful tools.
 | `:2.8.1-curl-git-jq-sops-ssh-alpine-3.13` | [View](variants/2.8.1-curl-git-jq-sops-ssh-alpine-3.13) |
 | `:2.7.0-alpine-3.13` | [View](variants/2.7.0-alpine-3.13) |
 | `:2.7.0-curl-git-jq-sops-ssh-alpine-3.13` | [View](variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.13) |
-| `:2.8.1-alpine-3.12` | [View](variants/2.8.1-alpine-3.12) |
-| `:2.8.1-curl-git-jq-sops-ssh-alpine-3.12` | [View](variants/2.8.1-curl-git-jq-sops-ssh-alpine-3.12) |
-| `:2.7.0-alpine-3.12` | [View](variants/2.7.0-alpine-3.12) |
-| `:2.7.0-curl-git-jq-sops-ssh-alpine-3.12` | [View](variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.12) |
 
 ## Usage
 
