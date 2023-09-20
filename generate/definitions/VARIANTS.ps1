@@ -1,4 +1,8 @@
 # Docker image variants' definitions
+$local:VERSIONS = @(
+    '2.8.1'
+    '2.7.0'
+)
 $local:VARIANTS_MATRIX = @(
     @{
         package = 'webhook'
@@ -38,27 +42,6 @@ $local:VARIANTS_MATRIX = @(
         package_version = '2.7.0'
         distro = 'alpine'
         distro_version = '3.13'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'curl', 'git', 'jq', 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'webhook'
-        package_version = '2.8.1'
-        distro = 'alpine'
-        distro_version = '3.12'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'curl', 'git', 'jq', 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'webhook'
-        package_version = '2.7.0'
-        distro = 'alpine'
-        distro_version = '3.12'
-
         subvariants = @(
             @{ components = @() }
             @{ components = @( 'curl', 'git', 'jq', 'sops', 'ssh' ) }
