@@ -55,12 +55,12 @@ $VARIANTS = @(
                     }
                     components = $subVariant['components']
                 }
-                # Docker image tag. E.g. '3.8-curl'
+                # Docker image tag. E.g. '2.8.1' or '2.8.1-libvirt-8'
                 tag = @(
                         $variant['package_version']
                         $subVariant['components'] | ? { $_ }
-                        $variant['distro']
-                        $variant['distro_version']
+                        # $variant['distro']
+                        # $variant['distro_version']
                 ) -join '-'
                 tag_as_latest = if ($variant['package_version'] -eq $local:VARIANTS_MATRIX[0]['package_version'] -and $variant['distro_version'] -eq $local:VARIANTS_MATRIX[0]['distro_version']  -and $subVariant['components'].Count -eq 0) { $true } else { $false }
             }
