@@ -4,48 +4,36 @@ $local:VERSIONS = @(
     '2.7.0'
 )
 $local:VARIANTS_MATRIX = @(
-    @{
-        package = 'webhook'
-        package_version = '2.8.1'
-        distro = 'alpine'
-        distro_version = '3.17'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'libvirt-8' ) }
-            @{ components = @( 'curl', 'git', 'jq', 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'webhook'
-        package_version = '2.8.1'
-        distro = 'alpine'
-        distro_version = '3.15'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'libvirt-7' ) }
-            @{ components = @( 'curl', 'git', 'jq', 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'webhook'
-        package_version = '2.8.1'
-        distro = 'alpine'
-        distro_version = '3.13'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'libvirt-6' ) }
-            @{ components = @( 'curl', 'git', 'jq', 'sops', 'ssh' ) }
-        )
-    }
-    @{
-        package = 'webhook'
-        package_version = '2.7.0'
-        distro = 'alpine'
-        distro_version = '3.13'
-        subvariants = @(
-            @{ components = @() }
-            @{ components = @( 'curl', 'git', 'jq', 'sops', 'ssh' ) }
-        )
+    foreach ($v in $local:VERSIONS) {
+        @{
+            package = 'webhook'
+            package_version = $v
+            distro = 'alpine'
+            distro_version = '3.17'
+            subvariants = @(
+                @{ components = @() }
+                @{ components = @( 'libvirt-8' ) }
+                @{ components = @( 'curl', 'git', 'jq', 'sops', 'ssh' ) }
+            )
+        }
+        @{
+            package = 'webhook'
+            package_version = $v
+            distro = 'alpine'
+            distro_version = '3.15'
+            subvariants = @(
+                @{ components = @( 'libvirt-7' ) }
+            )
+        }
+        @{
+            package = 'webhook'
+            package_version = $v
+            distro = 'alpine'
+            distro_version = '3.13'
+            subvariants = @(
+                @{ components = @( 'libvirt-6' ) }
+            )
+        }
     }
 )
 
