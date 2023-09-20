@@ -32,10 +32,10 @@ jobs:
       run: |
         git diff --exit-code
 
-  build-2-8-1-alpine-3-17:
+  build-2-8-1:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.8.1-alpine-3.17
+      VARIANT: 2.8.1
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -107,7 +107,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-alpine-3.17
+        context: variants/2.8.1
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -121,7 +121,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-alpine-3.17
+        context: variants/2.8.1
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -134,7 +134,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-alpine-3.17
+        context: variants/2.8.1
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -153,10 +153,10 @@ jobs:
         rm -rf /tmp/.buildx-cache
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  build-2-8-1-libvirt-8-alpine-3-17:
+  build-2-8-1-libvirt-8:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.8.1-libvirt-8-alpine-3.17
+      VARIANT: 2.8.1-libvirt-8
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -228,7 +228,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-libvirt-8-alpine-3.17
+        context: variants/2.8.1-libvirt-8
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -242,7 +242,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-libvirt-8-alpine-3.17
+        context: variants/2.8.1-libvirt-8
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -255,7 +255,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-libvirt-8-alpine-3.17
+        context: variants/2.8.1-libvirt-8
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -273,10 +273,10 @@ jobs:
         rm -rf /tmp/.buildx-cache
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  build-2-8-1-curl-git-jq-sops-ssh-alpine-3-17:
+  build-2-8-1-curl-git-jq-sops-ssh:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.8.1-curl-git-jq-sops-ssh-alpine-3.17
+      VARIANT: 2.8.1-curl-git-jq-sops-ssh
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -348,7 +348,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-curl-git-jq-sops-ssh-alpine-3.17
+        context: variants/2.8.1-curl-git-jq-sops-ssh
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -362,7 +362,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-curl-git-jq-sops-ssh-alpine-3.17
+        context: variants/2.8.1-curl-git-jq-sops-ssh
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -375,7 +375,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-curl-git-jq-sops-ssh-alpine-3.17
+        context: variants/2.8.1-curl-git-jq-sops-ssh
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -393,10 +393,10 @@ jobs:
         rm -rf /tmp/.buildx-cache
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  build-2-8-1-libvirt-7-alpine-3-15:
+  build-2-8-1-libvirt-7:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.8.1-libvirt-7-alpine-3.15
+      VARIANT: 2.8.1-libvirt-7
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -468,7 +468,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-libvirt-7-alpine-3.15
+        context: variants/2.8.1-libvirt-7
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -482,7 +482,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-libvirt-7-alpine-3.15
+        context: variants/2.8.1-libvirt-7
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -495,7 +495,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-libvirt-7-alpine-3.15
+        context: variants/2.8.1-libvirt-7
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -513,10 +513,10 @@ jobs:
         rm -rf /tmp/.buildx-cache
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  build-2-8-1-libvirt-6-alpine-3-13:
+  build-2-8-1-libvirt-6:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.8.1-libvirt-6-alpine-3.13
+      VARIANT: 2.8.1-libvirt-6
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -588,7 +588,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-libvirt-6-alpine-3.13
+        context: variants/2.8.1-libvirt-6
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -602,7 +602,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-libvirt-6-alpine-3.13
+        context: variants/2.8.1-libvirt-6
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -615,7 +615,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.8.1-libvirt-6-alpine-3.13
+        context: variants/2.8.1-libvirt-6
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -633,10 +633,10 @@ jobs:
         rm -rf /tmp/.buildx-cache
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  build-2-7-0-alpine-3-17:
+  build-2-7-0:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.7.0-alpine-3.17
+      VARIANT: 2.7.0
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -708,7 +708,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-alpine-3.17
+        context: variants/2.7.0
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -722,7 +722,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-alpine-3.17
+        context: variants/2.7.0
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -735,7 +735,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-alpine-3.17
+        context: variants/2.7.0
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -753,10 +753,10 @@ jobs:
         rm -rf /tmp/.buildx-cache
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  build-2-7-0-libvirt-8-alpine-3-17:
+  build-2-7-0-libvirt-8:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.7.0-libvirt-8-alpine-3.17
+      VARIANT: 2.7.0-libvirt-8
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -828,7 +828,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-libvirt-8-alpine-3.17
+        context: variants/2.7.0-libvirt-8
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -842,7 +842,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-libvirt-8-alpine-3.17
+        context: variants/2.7.0-libvirt-8
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -855,7 +855,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-libvirt-8-alpine-3.17
+        context: variants/2.7.0-libvirt-8
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -873,10 +873,10 @@ jobs:
         rm -rf /tmp/.buildx-cache
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  build-2-7-0-curl-git-jq-sops-ssh-alpine-3-17:
+  build-2-7-0-curl-git-jq-sops-ssh:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.7.0-curl-git-jq-sops-ssh-alpine-3.17
+      VARIANT: 2.7.0-curl-git-jq-sops-ssh
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -948,7 +948,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.17
+        context: variants/2.7.0-curl-git-jq-sops-ssh
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -962,7 +962,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.17
+        context: variants/2.7.0-curl-git-jq-sops-ssh
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -975,7 +975,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-curl-git-jq-sops-ssh-alpine-3.17
+        context: variants/2.7.0-curl-git-jq-sops-ssh
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -993,10 +993,10 @@ jobs:
         rm -rf /tmp/.buildx-cache
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  build-2-7-0-libvirt-7-alpine-3-15:
+  build-2-7-0-libvirt-7:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.7.0-libvirt-7-alpine-3.15
+      VARIANT: 2.7.0-libvirt-7
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -1068,7 +1068,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-libvirt-7-alpine-3.15
+        context: variants/2.7.0-libvirt-7
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -1082,7 +1082,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-libvirt-7-alpine-3.15
+        context: variants/2.7.0-libvirt-7
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -1095,7 +1095,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-libvirt-7-alpine-3.15
+        context: variants/2.7.0-libvirt-7
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -1113,10 +1113,10 @@ jobs:
         rm -rf /tmp/.buildx-cache
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
-  build-2-7-0-libvirt-6-alpine-3-13:
+  build-2-7-0-libvirt-6:
     runs-on: ubuntu-latest
     env:
-      VARIANT: 2.7.0-libvirt-6-alpine-3.13
+      VARIANT: 2.7.0-libvirt-6
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -1188,7 +1188,7 @@ jobs:
       if: github.event_name == 'pull_request'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-libvirt-6-alpine-3.13
+        context: variants/2.7.0-libvirt-6
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: false
         tags: |
@@ -1202,7 +1202,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-libvirt-6-alpine-3.13
+        context: variants/2.7.0-libvirt-6
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -1215,7 +1215,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       uses: docker/build-push-action@v3
       with:
-        context: variants/2.7.0-libvirt-6-alpine-3.13
+        context: variants/2.7.0-libvirt-6
         platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
         push: true
         tags: |
@@ -1234,7 +1234,7 @@ jobs:
         mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
   update-draft-release:
-    needs: [build-2-8-1-alpine-3-17, build-2-8-1-libvirt-8-alpine-3-17, build-2-8-1-curl-git-jq-sops-ssh-alpine-3-17, build-2-8-1-libvirt-7-alpine-3-15, build-2-8-1-libvirt-6-alpine-3-13, build-2-7-0-alpine-3-17, build-2-7-0-libvirt-8-alpine-3-17, build-2-7-0-curl-git-jq-sops-ssh-alpine-3-17, build-2-7-0-libvirt-7-alpine-3-15, build-2-7-0-libvirt-6-alpine-3-13]
+    needs: [build-2-8-1, build-2-8-1-libvirt-8, build-2-8-1-curl-git-jq-sops-ssh, build-2-8-1-libvirt-7, build-2-8-1-libvirt-6, build-2-7-0, build-2-7-0-libvirt-8, build-2-7-0-curl-git-jq-sops-ssh, build-2-7-0-libvirt-7, build-2-7-0-libvirt-6]
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
@@ -1247,7 +1247,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-draft-release:
-    needs: [build-2-8-1-alpine-3-17, build-2-8-1-libvirt-8-alpine-3-17, build-2-8-1-curl-git-jq-sops-ssh-alpine-3-17, build-2-8-1-libvirt-7-alpine-3-15, build-2-8-1-libvirt-6-alpine-3-13, build-2-7-0-alpine-3-17, build-2-7-0-libvirt-8-alpine-3-17, build-2-7-0-curl-git-jq-sops-ssh-alpine-3-17, build-2-7-0-libvirt-7-alpine-3-15, build-2-7-0-libvirt-6-alpine-3-13]
+    needs: [build-2-8-1, build-2-8-1-libvirt-8, build-2-8-1-curl-git-jq-sops-ssh, build-2-8-1-libvirt-7, build-2-8-1-libvirt-6, build-2-7-0, build-2-7-0-libvirt-8, build-2-7-0-curl-git-jq-sops-ssh, build-2-7-0-libvirt-7, build-2-7-0-libvirt-6]
     if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
@@ -1262,7 +1262,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   update-dockerhub-description:
-    needs: [build-2-8-1-alpine-3-17, build-2-8-1-libvirt-8-alpine-3-17, build-2-8-1-curl-git-jq-sops-ssh-alpine-3-17, build-2-8-1-libvirt-7-alpine-3-15, build-2-8-1-libvirt-6-alpine-3-13, build-2-7-0-alpine-3-17, build-2-7-0-libvirt-8-alpine-3-17, build-2-7-0-curl-git-jq-sops-ssh-alpine-3-17, build-2-7-0-libvirt-7-alpine-3-15, build-2-7-0-libvirt-6-alpine-3-13]
+    needs: [build-2-8-1, build-2-8-1-libvirt-8, build-2-8-1-curl-git-jq-sops-ssh, build-2-8-1-libvirt-7, build-2-8-1-libvirt-6, build-2-7-0, build-2-7-0-libvirt-8, build-2-7-0-curl-git-jq-sops-ssh, build-2-7-0-libvirt-7, build-2-7-0-libvirt-6]
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
