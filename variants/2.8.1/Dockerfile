@@ -14,6 +14,10 @@ COPY --from=builder /usr/local/bin/webhook /usr/local/bin/webhook
 RUN webhook --version
 
 RUN apk add --no-cache ca-certificates
+
+# Install Task Spooler
+RUN apk add --no-cache ts
+
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x docker-entrypoint.sh
 

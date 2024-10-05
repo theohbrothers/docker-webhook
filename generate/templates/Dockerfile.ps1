@@ -16,6 +16,10 @@ RUN webhook --version
 
 RUN apk add --no-cache ca-certificates
 
+# Install Task Spooler
+RUN apk add --no-cache ts
+
+
 "@
 
 $VARIANT['_metadata']['components'] | % {
