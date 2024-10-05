@@ -12,6 +12,16 @@ $local:VARIANTS_MATRIX = @(
             distro_version = '3.20'
             subvariants = @(
                 @{ components = @() }
+                @{ components = @( 'libvirt-10' ) }
+            )
+        }
+        @{
+            package = 'webhook'
+            package_version = $v
+            distro = 'alpine'
+            distro_version = '3.19'
+            subvariants = @(
+                @{ components = @( 'libvirt-9' ) }
             )
         }
         @{
