@@ -11,11 +11,15 @@ Dockerized [`webhook`](https://github.com/adnanh/webhook) with useful tools.
 | Tag | Dockerfile Build Context |
 |:-------:|:---------:|
 | `:2.8.1`, `:latest` | [View](variants/2.8.1) |
+| `:2.8.1-libvirt-10` | [View](variants/2.8.1-libvirt-10) |
+| `:2.8.1-libvirt-9` | [View](variants/2.8.1-libvirt-9) |
 | `:2.8.1-libvirt-8` | [View](variants/2.8.1-libvirt-8) |
 | `:2.8.1-curl-git-jq-sops-ssh` | [View](variants/2.8.1-curl-git-jq-sops-ssh) |
 | `:2.8.1-libvirt-7` | [View](variants/2.8.1-libvirt-7) |
 | `:2.8.1-libvirt-6` | [View](variants/2.8.1-libvirt-6) |
 | `:2.7.0` | [View](variants/2.7.0) |
+| `:2.7.0-libvirt-10` | [View](variants/2.7.0-libvirt-10) |
+| `:2.7.0-libvirt-9` | [View](variants/2.7.0-libvirt-9) |
 | `:2.7.0-libvirt-8` | [View](variants/2.7.0-libvirt-8) |
 | `:2.7.0-curl-git-jq-sops-ssh` | [View](variants/2.7.0-curl-git-jq-sops-ssh) |
 | `:2.7.0-libvirt-7` | [View](variants/2.7.0-libvirt-7) |
