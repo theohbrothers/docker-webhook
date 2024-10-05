@@ -21,6 +21,8 @@ Dockerized [`webhook`](https://github.com/adnanh/webhook) with useful tools.
 | `:2.7.0-libvirt-7` | [View](variants/2.7.0-libvirt-7) |
 | `:2.7.0-libvirt-6` | [View](variants/2.7.0-libvirt-6) |
 
+- All variants contain [`ts`](https://viric.name/soft/ts/) to help run background tasks.
+
 ## Usage
 
 ```sh

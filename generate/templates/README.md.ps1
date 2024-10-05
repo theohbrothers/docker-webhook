@@ -26,6 +26,8 @@ $(
     }
 }) -join ''
 )
+- All variants contain [``ts``](https://viric.name/soft/ts/) to help run background tasks.
+
 
 "@
 
