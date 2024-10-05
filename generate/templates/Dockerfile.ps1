@@ -47,7 +47,7 @@ RUN apk add --no-cache jq
 "@
         }
 
-        { $_ -in @('libvirt-8', 'libvirt-7', 'libvirt-6') } {
+        { $_ -match 'libvirt-\d+' } {
     @"
 RUN apk add --no-cache libvirt-client
 
