@@ -9,9 +9,17 @@ $local:VARIANTS_MATRIX = @(
             package = 'webhook'
             package_version = $v
             distro = 'alpine'
-            distro_version = '3.17'
+            distro_version = '3.20'
             subvariants = @(
                 @{ components = @() }
+            )
+        }
+        @{
+            package = 'webhook'
+            package_version = $v
+            distro = 'alpine'
+            distro_version = '3.17'
+            subvariants = @(
                 @{ components = @( 'libvirt-8' ) }
                 @{ components = @( 'curl', 'git', 'jq', 'sops', 'ssh' ) }
             )
