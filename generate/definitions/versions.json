@@ -1,0 +1,10 @@
+{
+  "webhook": {
+    "versions": [
+      "2.8.1",
+      "2.7.0"
+    ],
+    "versionsChangeScope": "minor",
+    "versionsNewScript": "Invoke-WebRequest https://api.github.com/repos/adnanh/webhook/git/refs/tags | ConvertFrom-Json | % { $_.ref -replace 'refs/tags/', '' } | ? { $_ -match '^\\d+\\.\\d+\\.\\d+$' } | Sort-Object { [version]$_ } -Descending | ? { [version]$_ -ge [version]'2.7.0' }"
+  }
+}

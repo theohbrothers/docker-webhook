@@ -1,10 +1,8 @@
+$local:VERSIONS = @( Get-Content $PSScriptRoot/versions.json -Encoding utf8 -raw | ConvertFrom-Json )
+
 # Docker image variants' definitions
-$local:VERSIONS = @(
-    '2.8.1'
-    '2.7.0'
-)
 $local:VARIANTS_MATRIX = @(
-    foreach ($v in $local:VERSIONS) {
+    foreach ($v in $local:VERSIONS.webhook.versions) {
         @{
             package = 'webhook'
             package_version = $v
@@ -81,7 +79,7 @@ $VARIANTS = @(
                         # $variant['distro']
                         # $variant['distro_version']
                 ) -join '-'
-                tag_as_latest = if ($variant['package_version'] -eq $local:VARIANTS_MATRIX[0]['package_version'] -and $variant['distro_version'] -eq $local:VARIANTS_MATRIX[0]['distro_version']  -and $subVariant['components'].Count -eq 0) { $true } else { $false }
+                tag_as_latest = if ($variant['package_version'] -eq $local:VARIANTS_MATRIX[0]['package_version'] -and $subVariant['components'].Count -eq 0) { $true } else { $false }
             }
         }
     }
