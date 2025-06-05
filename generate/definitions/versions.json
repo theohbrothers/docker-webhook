@@ -1,7 +1,7 @@
 {
   "webhook": {
     "versions": [
-      "2.8.1",
+      "2.8.2",
       "2.7.0"
     ],
     "versionsChangeScope": "minor",
