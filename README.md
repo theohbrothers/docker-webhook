@@ -10,13 +10,13 @@ Dockerized [`webhook`](https://github.com/adnanh/webhook) with useful tools.
 
 | Tag | Dockerfile Build Context |
 |:-------:|:---------:|
-| `:2.8.2`, `:latest` | [View](variants/2.8.2) |
-| `:2.8.2-libvirt-10` | [View](variants/2.8.2-libvirt-10) |
-| `:2.8.2-libvirt-9` | [View](variants/2.8.2-libvirt-9) |
-| `:2.8.2-libvirt-8` | [View](variants/2.8.2-libvirt-8) |
-| `:2.8.2-curl-git-jq-sops-ssh` | [View](variants/2.8.2-curl-git-jq-sops-ssh) |
-| `:2.8.2-libvirt-7` | [View](variants/2.8.2-libvirt-7) |
-| `:2.8.2-libvirt-6` | [View](variants/2.8.2-libvirt-6) |
+| `:2.8.3`, `:latest` | [View](variants/2.8.3) |
+| `:2.8.3-libvirt-10` | [View](variants/2.8.3-libvirt-10) |
+| `:2.8.3-libvirt-9` | [View](variants/2.8.3-libvirt-9) |
+| `:2.8.3-libvirt-8` | [View](variants/2.8.3-libvirt-8) |
+| `:2.8.3-curl-git-jq-sops-ssh` | [View](variants/2.8.3-curl-git-jq-sops-ssh) |
+| `:2.8.3-libvirt-7` | [View](variants/2.8.3-libvirt-7) |
+| `:2.8.3-libvirt-6` | [View](variants/2.8.3-libvirt-6) |
 | `:2.7.0` | [View](variants/2.7.0) |
 | `:2.7.0-libvirt-10` | [View](variants/2.7.0-libvirt-10) |
 | `:2.7.0-libvirt-9` | [View](variants/2.7.0-libvirt-9) |
